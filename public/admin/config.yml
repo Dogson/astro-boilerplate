@@ -1,0 +1,20 @@
+media_folder: "src/assets/images" # Emplacement où les fichiers seront stockés dans le dépôt
+public_folder: "src/assets/images" # L'attribut src pour les médias téléchargés
+backend:
+    name: github
+    repo: username/repo # Nom d'utilisateur et dépôt GitHub pour lequel vous souhaitez utiliser Netlify CMS
+    branch: master # Branche de votre dépôt où les modifications seront apportées
+    commit_messages:
+        create: 'Create {{collection}} “{{slug}}”'
+        update: 'Update {{collection}} “{{slug}}”'
+        delete: 'Delete {{collection}} “{{slug}}”'
+collections:
+  - name: "recettes" # Utilisé dans les routes, par exemple, /admin/collections/blog
+    label: "Recettes" # Utilisé dans l'UI
+    folder: "src/content/recettes" # Chemin d'accès au dossier dans lequel les documents sont stockés
+    create: true # Permettre aux utilisateurs de créer de nouveaux documents dans cette collection
+    fields: # Les champs de chaque document, généralement en tête de page
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "Image", name: "thumbnail", widget: "image" }
+      - { label: "Recette", name: "body", widget: "markdown" }
