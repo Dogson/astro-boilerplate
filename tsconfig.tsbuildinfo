@@ -1,0 +1,1 @@
+{"root":["./.astro/types.d.ts","./astro.config.mjs","./eslint.config.mjs","./prettier.config.mjs","./vitest.config.mjs","./src/components/button/button.component.tsx","./src/components/button/stories/button.stories.tsx"],"version":"5.7.3"}
